@@ -9,10 +9,15 @@ import EditPaymentMethod from "@/components/profile/edit-payment-method.componen
 import EditPassword from "@/components/profile/edit-password.component.vue";
 import UserCart from "@/components/cart/user-cart.component.vue";
 import TheToolbar from "@/components/shared/the-toolbar.component.vue";
+import PremiumInfo from "@/components/premium/premium-info.component.vue";
+import PremiumConfirmation from "@/components/premium/premium-confirmation.component.vue";
 import {createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-  { path: '/', component: TheToolbar },
+  { path: '/', component: PremiumInfo },
+
+  { path: '/premium', component: PremiumInfo},
+  { path: '/premium-confirmation', component: PremiumConfirmation},
 
   { path: '/published', component: PublishedShirtsComponent},
   { path: '/published/:id', name: "shirtDescription", component: ShirtDescriptionComponent},
