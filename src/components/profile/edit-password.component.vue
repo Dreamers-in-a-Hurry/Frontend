@@ -1,8 +1,38 @@
 <script setup>
+import { nextTick } from 'vue';
+import { onMounted ,ref } from 'vue';
+import {UsersApiService} from "@/services/users-api.service.js";
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+const userService = new UsersApiService();
+
+let user = ref({})
+
+const fetchUserData = async () => {
+  user.value = await userService.getUserById(1);
+}
+
+const editUser = async () =>{
+  await userService.editUser(user.value);
+  console.log(user.value);
+}
+
+const renderComponent = ref(true);
+
+const forceRerender = async () => {
+  renderComponent.value = false;
+  await nextTick();
+  renderComponent.value = true;
+};
+
+onMounted(async () => {
+  fetchUserData();
+})
 </script>
 
 <template>
-  <pv_card class="card-container">
+  <pv_card v-if="renderComponent" class="card-container">
     <template #content>
       <div class="form-container">
         <div class="title-text">Editar Contraseña</div>
@@ -10,14 +40,14 @@
           <div class="subtitle-text">Contraseña Antigua</div>
           <pv_inputText class="info-container"></pv_inputText>
           <div class="subtitle-text">Contraseña Nueva</div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText v-model="user.password" class="info-container"></pv_inputText>
           <div class="subtitle-text">Repetir nueva Contraseña </div>
           <pv_inputText class="info-container"></pv_inputText>
         </div>
       </div>
       <div class="button-container">
         <router-link to="/profile"><pv_button class="button-style">Cancelar</pv_button></router-link>
-        <router-link to="/profile"><pv_button class="button-style">Confirmar</pv_button></router-link>
+        <router-link to="/profile"><pv_button @click="editUser(); forceRerender()" class="button-style">Confirmar</pv_button></router-link>
 
 
       </div>

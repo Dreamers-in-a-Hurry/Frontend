@@ -1,4 +1,22 @@
 <script setup>
+import { onMounted ,ref } from 'vue';
+import {UsersApiService} from "@/services/users-api.service.js";
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+const userService = new UsersApiService();
+
+let user = ref({})
+
+const fetchUserData = async () => {
+  user.value = await userService.getUserById(1);
+}
+
+
+
+onMounted(async () => {
+  fetchUserData();
+})
 </script>
 
 <template>
@@ -8,17 +26,17 @@
           <div class="title-text">Mi Perfil</div>
           <div>
             <div class="subtitle-text">Nombre Completo</div>
-            <div class="info-container"></div>
+            <div class="info-container">{{user.name}}</div>
             <div class="subtitle-text">Correo</div>
-            <div class="info-container"></div>
+            <div class="info-container">{{user.email}}</div>
             <div class="subtitle-text">N°Contacto </div>
-            <div class="info-container"></div>
+            <div class="info-container">{{user.number1}}</div>
             <div class="subtitle-text">N°Contacto Adicional</div>
-            <div class="info-container"></div>
+            <div class="info-container">{{user.number2}}</div>
             <div class="subtitle-text">Dni o Ruc</div>
-            <div class="info-container"></div>
+            <div class="info-container">{{user.document}}</div>
             <div class="subtitle-text">Dirección</div>
-            <div class="info-container"></div>
+            <div class="info-container">{{user.shipment_address}}</div>
           </div>
         </div>
         <div class="button-container">

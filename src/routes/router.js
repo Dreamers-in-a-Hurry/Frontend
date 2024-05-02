@@ -9,7 +9,7 @@ import {createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     { path: '/', component: TheToolbar },
-    { path: '/profile', component: UserProfileComponent },
+    { path: '/profile', name: "userProfile",component: UserProfileComponent},
     { path: '/edit-profile', component: EditProfileComponent },
     { path: '/edit-password', component: EditPassword },
     { path: '/edit-payment-method', component: EditPaymentMethod },

@@ -1,30 +1,58 @@
 <script setup>
+import { nextTick } from 'vue';
+import { onMounted ,ref } from 'vue';
+import {UsersApiService} from "@/services/users-api.service.js";
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+const userService = new UsersApiService();
+
+let user = ref({})
+
+const fetchUserData = async () => {
+  user.value = await userService.getUserById(1);
+}
+
+const editUser = async () =>{
+  await userService.editUser(user.value);
+  console.log(user.value);
+}
+const renderComponent = ref(true);
+
+const forceRerender = async () => {
+  renderComponent.value = false;
+  await nextTick();
+  renderComponent.value = true;
+};
+
+onMounted(async () => {
+  fetchUserData();
+})
 </script>
 
 <template>
-  <pv_card class="card-container">
+  <pv_card v-if="renderComponent" class="card-container">
     <template #content>
       <div class="form-container">
         <div class="title-text">Editar Perfil</div>
         <div>
           <div class="subtitle-text">Nombre Completo</div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText v-model="user.name" class="info-container"></pv_inputText>
           <div class="subtitle-text">Correo</div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText v-model="user.email" class="info-container"></pv_inputText>
           <div class="subtitle-text">N°Contacto </div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText v-model="user.number1" class="info-container"></pv_inputText>
           <div class="subtitle-text">N°Contacto Adicional</div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText v-model="user.number2" class="info-container"></pv_inputText>
           <div class="subtitle-text">Dni o Ruc</div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText v-model="user.document" class="info-container"></pv_inputText>
           <div class="subtitle-text">Dirección</div>
-          <pv_inputText class="info-container"></pv_inputText>
+          <pv_inputText :value="user.shipment_address" class="info-container"></pv_inputText>
         </div>
       </div>
       <div class="button-container">
         <router-link to="/profile"><pv_button class="button-style">Cancelar</pv_button></router-link>
-        <router-link to="/profile"><pv_button class="button-style">Continuar</pv_button></router-link>
-
+        <router-link to="/profile"><pv_button @click="editUser(); forceRerender()" class="button-style">Continuar</pv_button></router-link>
       </div>
     </template>
   </pv_card>

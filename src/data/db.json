@@ -1,0 +1,308 @@
+{
+  "shirts": [
+    {
+      "id": "1",
+      "image": "/images/shirts/camiseta_1.png",
+      "category": "Football",
+      "color": "Red",
+      "name": "Camiseta 1",
+      "stock": 4,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 120,
+      "seller": "Jaime Jensen"
+    },
+    {
+      "id": "2",
+      "image": "/images/shirts/camiseta_2.png",
+      "category": "Football",
+      "color": "Blue",
+      "name": "Camiseta 2",
+      "stock": 50,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 160,
+      "seller": "Jaime Jensen"
+    },
+    {
+      "id": "3",
+      "image": "/images/shirts/camiseta_3.png",
+      "category": "Football",
+      "color": "Green",
+      "name": "Camiseta 3",
+      "stock": 14,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 69,
+      "seller": "Alvaro Alvarez"
+    },
+    {
+      "id": "4",
+      "image": "/images/shirts/camiseta_4.png",
+      "category": "Football",
+      "color": "Black",
+      "name": "Camiseta 4",
+      "stock": 20,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 145,
+      "seller": "Alvaro Alvarez"
+    },
+    {
+      "id": "5",
+      "image": "/images/shirts/camiseta_5.png",
+      "category": "Volleyball",
+      "color": "White",
+      "name": "Camiseta 5",
+      "stock": 89,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 199,
+      "seller": "Alvaro Alvarez"
+    },
+    {
+      "id": "6",
+      "image": "/images/shirts/camiseta_6.png",
+      "category": "Volleyball",
+      "color": "Yellow",
+      "name": "Camiseta 6",
+      "stock": 27,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 60,
+      "seller": "Carlos Castro"
+    },
+    {
+      "id": "7",
+      "image": "/images/shirts/camiseta_7.png",
+      "category": "Volleyball",
+      "color": "Yellow",
+      "name": "Camiseta 7",
+      "stock": 25,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 109,
+      "seller": "Patricio Perez"
+    },
+    {
+      "id": "8",
+      "image": "/images/shirts/camiseta_8.png",
+      "category": "Volleyball",
+      "color": "Gray",
+      "name": "Camiseta 8",
+      "stock": 40,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 110,
+      "seller": "Rodrigo Ramirez"
+    },
+    {
+      "id": "9",
+      "image": "/images/shirts/camiseta_9.png",
+      "category": "Basketball",
+      "color": "Purple",
+      "name": "Camiseta 9",
+      "stock": 14,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 169,
+      "seller": "Carlos Castro"
+    },
+    {
+      "id": "10",
+      "image": "/images/shirts/camiseta_10.png",
+      "category": "Basketball",
+      "color": "Purple",
+      "name": "Camiseta 10",
+      "stock": 43,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 129,
+      "seller": "Rodrigo Ramirez"
+    },
+    {
+      "id": "11",
+      "image": "/images/shirts/camiseta_11.png",
+      "category": "Basketball",
+      "color": "Red",
+      "name": "Camiseta 11",
+      "stock": 12,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 79,
+      "seller": "Jaime Jensen"
+    },
+    {
+      "id": "12",
+      "image": "/images/shirts/camiseta_12.png",
+      "category": "Basketball",
+      "color": "Yellow",
+      "name": "Camiseta 12",
+      "stock": 40,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 79,
+      "seller": "Rodrigo Ramirez"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Football"
+    },
+    {
+      "id": "2",
+      "name": "Volleyball"
+    },
+    {
+      "id": "3",
+      "name": "Basketball"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "image": "/images/shirts/camiseta_1.png",
+      "category": "Football",
+      "color": "Red",
+      "name": "Polo rojo con franjas rojas",
+      "styles": "Deportivo Manga Corta",
+      "stock": "8",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": "321312"
+    },
+    {
+      "id": "2",
+      "image": "/images/shirts/camiseta_2.png",
+      "category": "Basketball",
+      "color": "Blue",
+      "name": "Polo azul con franjas negras",
+      "styles": "Deportivo Manga Corta",
+      "stock": 3,
+      "sizes": [
+        "X",
+        "XL",
+        "M"
+      ],
+      "price": 150
+    },
+    {
+      "id": "3",
+      "image": "/images/shirts/camiseta_3.png",
+      "category": "Volleyball",
+      "color": "Green",
+      "name": "Polo verde",
+      "styles": "Deportivo Manga Corta",
+      "stock": 5,
+      "sizes": [
+        "S",
+        "XL",
+        "M"
+      ],
+      "price": 69
+    },
+    {
+      "id": "4",
+      "image": "/images/shirts/camiseta_4.png",
+      "category": "Football",
+      "color": "Black",
+      "name": "Polo negro con diseño",
+      "styles": "Deportivo Manga Corta",
+      "stock": 10,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 100
+    }
+  ],
+  "cart": [],
+  "users": [
+    {
+      "id": 1,
+      "name": "Maria22",
+      "email": "Red@gmail.com",
+      "number1": "9231231",
+      "number2": "923123",
+      "document": "923123",
+      "shipment_address": "Lambayeqye-Los tulipanes",
+      "billing_address": "Lambayeqye-Los tulipanes",
+      "password": "123422",
+      "username": "Maria1234",
+      "card_number": "123",
+      "card_due_date": "123",
+      "card_security_code": "123"
+    },
+    {
+      "id": 2,
+      "name": "Pedro",
+      "email": "Red@gmail.com",
+      "number1": "9231231",
+      "number2": "923123",
+      "document": "923123",
+      "shipment_address": "Lambayeque-Los tulipanes",
+      "billing_address": "Lambayeqye-Los tulipanes",
+      "password": "1234",
+      "username": "Maria1234",
+      "card_number": "1234-1234-1241-234",
+      "card_due_date": "12/12",
+      "card_security_code": "123"
+    },
+    {
+      "id": 3,
+      "name": "Roberto",
+      "email": "Red@gmail.com",
+      "number1": "9231231",
+      "number2": "923123",
+      "document": "923123",
+      "shipment_address": "Lambayeque-Los tulipanes",
+      "billing_address": "Lambayeqye-Los tulipanes",
+      "password": "1234",
+      "username": "Maria1234",
+      "card_number": "1234-1234-1241-234",
+      "card_due_date": "12/12",
+      "card_security_code": "123"
+    }
+  ]
+}
